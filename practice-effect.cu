@@ -162,12 +162,13 @@ int main(int argc, char** argv)
 
     outdata<<"Resolucion: "<< image.rows<<std::endl;
     outdata<<"Cantidad de hilos: "<< n_threads<<std::endl;
+    outdata<<"Cantidad de bloques: "<< n_blocks<<std::endl;
     outdata<<"Time elapsed: "<<(long int)tval_result.tv_sec<<"."<<usec<<std::endl<<std::endl;
     outdata.close();
 
     //Resultados
     std::cout<<"cantidad de hilos "<< n_threads<<std::endl;
-    
+    std::cout<<"cantidad de bloques: "<< n_blocks<<std::endl;
     std::cout<<"nombre de imagen guardada "<< path_save <<std::endl<<std::endl;
 
     if (!cv::imwrite(path_save, result_image)) {

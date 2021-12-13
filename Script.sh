@@ -1,17 +1,15 @@
 nvcc practica3/practice-effect.cu -o practica3/practice-effect `pkg-config --cflags --libs opencv`
 
-imagenes=('hd1' 'fullhd1' '4k1')
+imagenes=('720' '1080' '4k')
 for i in {0..2}; 
 do 
     for block in 10 20 30 40 50 60; 
     do 
-        echo bloque $block;
         for thread in 64 128 256 512 1024;
         do 
-            echo hilo $thread;
             for iteracion in {0..9};
             do
-                do  ./practice-effect imagenes/${imagenes[$i]}.jpg ${imagenes[$i]}_output.jpg $block $thread; 
+                practica3/practice-effect practica3/img/${imagenes[$i]}.jpg practica3/${imagenes[$i]}_output.jpg $block $thread; 
             done ;
         done ;
     done ;
