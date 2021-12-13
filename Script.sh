@@ -1,4 +1,4 @@
-nvcc practice-effect.cu -o practice-effect `pkg-config --cflags --libs opencv`
+nvcc practica3/practice-effect.cu -o practica3/practice-effect `pkg-config --cflags --libs opencv`
 
 imagenes=('hd1' 'fullhd1' '4k1')
 for i in {0..2}; 
