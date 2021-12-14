@@ -7,7 +7,7 @@ do
     do 
         for thread in 1 64 128 256 512 1024;
         do 
-                practica3/practice-effect practica3/img/${imagenes[$i]}.jpg practica3/${imagenes[$i]}_output.jpg $block $thread; 
+                practica3/practice-effect practica3/img/${imagenes[$i]}.jpg practica3/out/${imagenes[$i]}_output.jpg $block $thread; 
             done ;
         done ;
     done ;
